@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cat Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>Cat Dashboard</h1>
+    <p><a href="/cat/new">Create a new cat</a></p>
+
+    <% for (var i of cat) {%>
+        <p><b>Name:</b>
+            <%= i.name %>
+        </p>
+        <p><a href="/cat/<%= i._id %>">Details</a></p>
+        <hr>
+        <% } %>
+</body>
+
+</html>

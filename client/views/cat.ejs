@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= cat.name%>
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <p> Name:
+        <%= cat.name %>
+    </p>
+    <p> Color:
+        <%= cat.color %>
+    </p>
+    <p><a href="/cat/edit/<%= cat._id %>">Edit</a></p>
+    <form action="/cat/destroy/<%= cat._id %>" method="post">
+        <input type="submit" value="Delete Cat">
+    </form>
+</body>
+
+</html>
